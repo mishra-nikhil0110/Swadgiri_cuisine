@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function check()
+        {
+          if(document.getElementById('name').value== ""){
+            alert('Please enter your name');
+            return false;
+          }
+          else if(document.getElementById('email').value== ""){
+            alert('Please enter your email address');
+            return false;
+          }
+          else if(document.getElementById('contact').value== ""){
+            alert('Please enter your contact no');
+            return false;
+          }
+          
+          else if(document.getElementById('msg').value== ""){
+            alert('Please enter your message ');
+            return false;
+          }
+          else{
+            return true;
+          }
+        }
+  
+      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background: url("book3.jpg");
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .main {
+            text-align: center;
+            color: black;
+            font: sans-serif;
+            font-size: 40px;
+        }
+
+        input.name {
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #msg {
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        input#submit {
+            width: 100px;
+            padding: 7px;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .left {
+            float: left;
+            margin-left: 10%; color: white;
+        }
+
+        .right {
+            float: right;
+            margin-right: 10%;color: white;
+           
+        }
+
+        form#register {
+            margin: 40px;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-style: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="font-size:50px">Contact us<br>
+    <div class="main">
+        Have a question or comment?<br>
+        You are in the right place</p>
+    </div>
+    <form id="register" method="post"class="name " action="contactus.php" onsubmit=" return check()">
+        <div class="left">
+            <lable>Your name : </lable><br>
+            <input type="text" name="name" class="name "id="name" placeholder="Enter Your full name">
+            <br><br>
+            <lable>Your email address : </lable><br>
+            <input type="email" name="email" class="name "id="email" placeholder="Enter Your email :">
+            <br><br>
+            <lable>Contact number : </lable><br>
+            <input type="number" name="contact"class="name " id="contact" placeholder="Enter Your contact number:">
+            <br><br>
+            <lable>Enter your address : </lable><br>
+            <input type="text" name="address" id="name" class="name "placeholder="enter address">
+        </div>
+        <div class="right">
+            <lable>Enter your message here : </lable><br><br>
+            <textarea id="msg"  rows="13" cols="41" name="message" values="enter your Feedback here"></textarea><br><br>
+            <input type="submit" id="submit" name="submit" value="Send">
+    </form>
+
+</body>
+
+</html>

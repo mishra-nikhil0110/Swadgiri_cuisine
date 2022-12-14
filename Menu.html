@@ -1,0 +1,299 @@
+<DOCTYPE html>
+  <html>
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {
+        background-image: url("https://th.bing.com/th/id/R.e03cfa6ba28d2082a3c287683600224d?rik=%2fDfZt5zVX2H0sA&riu=http%3a%2f%2fil8.picdn.net%2fshutterstock%2fvideos%2f19819177%2fthumb%2f1.jpg&ehk=4KpsF1COztGsanWD22nxA%2bblkPAMXEgDnIwcA4%2bnh5Q%3d&risl=&pid=ImgRaw");
+        background-size: cover;
+        font-family: Algerian;
+        line-height: 0.9;
+        color: lightcyan;
+        margin: 0px
+      }
+      .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border:1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  width: 900px;
+  height :550px;
+  background:url('https://th.bing.com/th/id/OIP.b8pEkjanENOFvaaZ4Ds8hAHaE8?w=276&h=184&c=7&o=5&dpr=1.5&pid=1.7');
+  background-size: cover;
+ border-radius:20px;
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding:10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+      * {
+        box-sizing: border-box;
+      }
+
+      .boxed_1 {
+        float: center;
+        height: 50%;
+        width: 100%;
+      }
+
+      .small_1 {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        height: 70%;
+        width: 18%;
+        float: left;
+        margin: 3%;
+        color: azure;
+        text-align: bottom;
+      }
+
+      #a {
+        margin-left: 5%;
+        background: url('https://th.bing.com/th/id/OIP.rOrluF5bcjqK2VpmxnftGwHaFj?w=218&h=180&c=7&o=5&dpr=1.5&pid=1.7');
+      }
+
+      #b {
+        background: url('https://demo.ovathemes.com/reon/wp-content/uploads/2018/12/hp-2-slide-bg-2.jpg');
+        background-size: cover;
+      }
+
+      #c {
+        background: url('https://th.bing.com/th/id/OIP.Y2Aq36IbXfKorrfu0wtylwHaEc?w=272&h=180&c=7&o=5&dpr=1.5&pid=1.7');
+        background-size: cover;
+      }
+
+      #d {
+        background: url('https://th.bing.com/th/id/OIP.eZEKwn_K9Fcv_Z_ICWf51AHaE7?w=277&h=184&c=7&o=5&dpr=1.5&pid=1.7')
+      }
+
+      .text {
+        margin-top: 75%;
+        text-align: center;
+        font-size: 35px;
+        background-color: rgba(0,0,0,0.6);
+      }
+
+
+      .container {
+        margin: 50px auto;
+        width: 1200px;
+        height: 480px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        position: relative;
+        margin: 50px auto;
+
+
+      }
+
+      .photo {
+        position: absolute;
+        animation: round 16s infinite;
+        opacity: 0;
+      }
+
+      @keyframes round {
+        25% {
+          opacity: 1;
+        }
+
+        40% {
+          opacity: 0;
+        }
+      }
+
+      -webkit-@keyframes round {
+        25% {
+          opacity: 1;
+          -webkit-opacity: 1;
+        }
+
+        40% {
+          opacity: 0;
+          -webkit-opacity: 0;
+        }
+      }
+
+      img:nth-child(1) {
+        animation-delay: 12s;
+      }
+
+      img:nth-child(2) {
+        animation-delay: 8s;
+      }
+
+      img:nth-child(3) {
+        animation-delay: 4s;
+      }
+
+      img:nth-child(4) {
+        animation-delay: 0s;
+      }
+
+
+
+      .footer {
+        position: static;
+        height: 30%;
+        width: 100%;
+        background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+
+        color: white;
+        text-align: center;
+      }
+
+      .icon .fa {
+        color: blue;
+        padding: 18px 0;
+        cursor: pointer;
+        margin: 0 13px;
+
+
+      }
+
+      .navbar_1 {
+        float: right;
+        display: block;
+        text-align: center;
+        padding: 6px 10px;
+        line-height: 0.7;
+        text-decoration: none;
+        background-color: brown;
+        margin-right:2%;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+
+      }
+      @viewport{
+        zoom: 1;
+        width:extend-to-zoom;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+       
+        <span class="close">&times;</span>
+        <h1 style="color:azure"> &nbsp Our todays special...</h1>
+      </div>
+    
+    </div>
+    <div class="navbar_1" >
+      <font size="5">
+        <a href="homepage.html" style="color:	white;text-decoration:none;font-family:fantasy;"><i
+            class="fa fa-home"></i>&nbsp Home</a>
+      </font>
+    </div>
+    <br />
+    <font size="7">
+      <h1>
+        <center>Swadgiri
+      </h1>
+    </font>
+
+    <font size="6">
+      <h2>
+        <center>OUR MENU
+      </h2>
+    </font>
+
+    <div class="container">
+      <img class='photo'
+        src="https://res.cloudinary.com/mealthy1/image/upload/ar_16:11,c_fill,f_auto,h_600,q_auto:best,w_800/v1549977974/cms_recipe_featured_image/m3czw2wmsijjbwsjpgor.jpg"
+        alt="paneer" width="1200px" height="480px" />
+      <img class='photo'
+        src="https://img.delicious.com.au/N7G9pkZK/w1200/del/2018/05/date-and-chestnut-cake-with-pomegranate-butterscotch-80283-2.jpg"
+        alt="cake" width="1200px" height="480px" />
+      <img class='photo' src="https://th.bing.com/th/id/OIP.WYX4_lnV83K5pSpWxkugpQHaG-?pid=ImgDet&rs=1"
+        alt="Gulab jamuun" width="1200px" height="480px" />
+      <img class='photo'
+        src="https://th.bing.com/th/id/R.b45b996f7bc5ab8f9009af8225a18329?rik=aP2Un7oN53kjQA&riu=http%3a%2f%2fwww.zastavki.com%2fpictures%2f2560x1600%2f2011%2fFood_Drinks_Strong_coffee_031528_.jpg&ehk=OGB2E0QFWTdN%2faVWCjNwOVOaSxeVOVvGNXli198udaw%3d&risl=&pid=ImgRaw"
+        alt="coffee" width="1200px" height="480px" />
+    </div>
+    <div class="boxed_1" style="margin:auto ;  box-sizing: border-box;">
+      <div class="small_1" id="a">
+        <a class="text" href="Dinner.html" style="color:White;text-decoration:none;display: block;">Dinner</a>
+      </div>
+      <div class="small_1" id="b">
+        <a class="text" href="Lunch.html" style="color:White;text-decoration:none;display: block;">Lunch</a>
+      </div>
+      <div class="small_1" id="c">
+        <a class="text" href="Brevarage.html" style="color:White;text-decoration:none;display: block;">Beverage</a>
+      </div>
+      <div class="small_1" id="d">
+        <a class="text" href="Dessert.html" style="color:White;text-decoration:none;display: block;">Dessert</a>
+      </div>
+
+    </div>
+    <br /><br /><br />
+    <div class="footer">
+
+      <h2 style="padding-top:3%">About us</h2>
+
+      <p>Drawing inspiration from classic Indian, The Original reinvents the neighborhood eatery to create
+        <br /> a timeless fusion of old and new,blending familiar comforts with an inventive, playful modern flair.
+      </p>
+      <br />
+      <div class="icon">
+        <center>
+          <a href="https://www.facebook.com/120077bhavyasingh"><i class="fa fa-facebook"></i></a>
+          <a href="https://instagram.com/abhishek_adiy?utm_medium=copy_link" ><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/muskan-singh-b94ab31bb"><i class="fa fa-linkedin"></i></a>
+          <a href="https://twitter.com/SatyaPr02433317?s=08"><i class="fa fa-twitter"></i></a>
+
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("myModal");
+      
+      var span = document.getElementsByClassName("close")[0];
+       function popup() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      document.getElementById("demo").innerHTML = popup();
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+  </body>
+
+  </html>

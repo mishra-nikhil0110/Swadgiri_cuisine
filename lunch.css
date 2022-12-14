@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {background-color: #f2f5f7;
+    background-image: linear-gradient(315deg, #ecf5f8 100%, #000000 74%); 
+                 background-size:cover;
+                  font-family:Algerian;
+      line-height:0.9;}
+    h1{color:rgb(216, 32, 32);}
+    .navbar {
+      overflow: hidden;
+    }
+    .navbar a {
+      float: center;
+      display: circle;
+      color: choclate;
+      text-align: center;
+      padding: 34px 20px;
+      text-decoration: none;
+      line-height:0.7;
+    }
+    .navbar_1 {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      line-height:0.7;
+      text-decoration: none;
+    }
+    
+    
+    a:link {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    .boxed_1 {
+      border: 5px solid grey ;
+    }
+    .small_1{ border:10px ; height:200px; width:300px; float:left; color:azure; background-color:black;margin-left:110px;margin-top: 50px; }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="book_table.css" type="text/css">
+    <script>
+      function check()
+      {
+        if(document.getElementById('name').value== ""){
+          alert('Please enter your name');
+          return false;
+        }
+        else if(document.getElementById('email').value== ""){
+          alert('Please enter your email address');
+          return false;
+        }
+        else if(document.getElementById('contact').value== ""){
+          alert('Please enter your contact no');
+          return false;
+        }
+        else if(document.getElementById('date').value== ""){
+          alert('Please select date');
+          return false;
+        }
+        else if(document.getElementById('time').value== ""){
+          alert('Please select time');
+          return false;
+        }
+        else{
+          return true;
+        }
+      }
+
+    </script>
+</head>
+<body>
+   <div class="main">
+<div class="register">
+ <h2>Book a table</h2>
+ <form id="register" onsubmit=" return check()">
+     <lable>Your name : </lable><br>
+      <input type="text" name="username" id="name" class="name"
+      placeholder="Enter Your full name">
+      <br><br>
+      <lable>Your email address : </lable><br>
+      <input type="email" name="email" id="email" class="name"
+      placeholder="Enter Your email :">
+      <br><br> <lable>Contact number : </lable><br>
+      <input type="number" name="contact" id="contact" class="name"
+      placeholder="Enter Your contact number:">
+      <br><br>
+      <lable>Enter no of guests : </lable><br>
+      <input type="number" name="guest_no" id="number" class="name"
+      placeholder="Enter between 1 to 6" min="1" max="6">
+      <br><br>
+      <lable>Select date : </lable><br>
+      <input type="date" name="date" id="date" class="name" 
+      placeholder="select your date">
+      <br><br> 
+     
+ 
+      <lable>Select Time : </lable><br>
+      <select id="time"class="name" name="time" placeholder="select between 07:00 and 02:00">
+        <option value="07:00">11:00 AM</option>
+        <option value="08:00">12:00 PM</option>
+        <option value="09:00">01:00 PM</option>
+        <option value="10:00">02:00 PM</option>
+        <option value="11:00">03:00 PM</option>
+        <option value="12:00">04:00 PM</option>
+        <option value="01:00">05:00 PM</option>
+        <option value="02:00">06:00 PM</option>
+        <option value="07:00">07:00 PM</option>
+        <option value="08:00">08:00 PM</option>
+        <option value="09:00">09:00 PM</option>
+        <option value="10:00">10:00 PM</option>
+        <option value="11:00">11:00 PM</option>
+        <option value="12:00">12:00 PM</option>
+
+      </select>
+      <br><br>
+      <input type="submit" id="submit" name="submit" value="Book your table">
+ </form>
+</div>
+</div>
+</body>
+</html>

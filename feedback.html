@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function check() {
+            if (document.getElementById('name').value == "") {
+                alert('Please enter your name');
+                return false;
+            }
+            else if (document.getElementById('email').value == "") {
+                alert('Please enter your email address');
+                return false;
+            }
+            else if (document.getElementById('contact').value == "") {
+                alert('Please enter your contact no');
+                return false;
+            }
+            else if (document.getElementById('feedback').value == "") {
+                alert('Please enter your feedback');
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+ </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="feedback.css" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="register">
+            <h2>Feedback</h2>
+            <form id="register" action="feedback.php" method="post" onsubmit=" return check()">
+                <lable>Your name : </lable><br>
+                <input type="text" name="name" id="name" class="name" placeholder="Enter Your full name">
+                <br><br><br>
+                <lable>Your email address : </lable><br>
+                <input type="email" name="email" id="email" class="name" placeholder="Enter Your email :">
+                <br><br><br>
+                <lable>Contact number : </lable><br>
+                <input type="number" name="contact" id="contact" class="name" placeholder="Enter Your contact number:">
+                <br><br><br>
+                <lable>Enter your Feedback below : </lable><br>
+                <textarea rows="6" cols="41" name="feedback" id="feedback" class="name"
+                    values="enter your Feedback here"></textarea>
+                <br><br><br>
+
+                <input type="submit" id="submit" name="submit" value="Submit your Feedback">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

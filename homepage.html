@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .header{
+            
+            font-family: latha;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.38),rgba(0, 0, 0, 0))
+            , url(food7.jpg), no-repeat;
+            background-repeat: no-repeat;
+            background-size:cover;
+            
+            
+        }
+        .box { width: 60%;
+        float: right;
+        
+        
+        border: 1px solid black;
+        }
+        .box ul li {
+            padding:7px;
+            width: 100px;
+            float:left;
+            margin: 10px auto;
+            text-align: center;
+        }
+        
+        .box ul li a { text-decoration: none;
+            color:darkgrey;
+        }
+        .box ul li :hover{ background-color: rgba(129, 129, 129, 0.411);
+            transition: 400ms;
+        }
+
+        .box ul li a:hover{color: rgb(255, 255, 255);
+            
+        }
+        .wd{ 
+            width:27%;
+            height: 640px;
+            background-color:black;
+            padding: 55px;
+            opacity: 0.9;
+        }
+        .wd h3{ 
+            text-align: justify;
+            color: darkgrey;
+
+        }
+        .wd h2{
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+        .opt form, input[type="button"]{
+            background-color:black;
+            color: white;
+            padding: 10px;
+            margin: 14px auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            text-align: center;
+            transition: 800ms;
+           
+
+        }
+        form, input[type="button"]:hover{ background-color:rgb(77, 12, 12);}
+
+        /* @media(max-width:700 px){
+            .header .wd h1{
+                font-size:10px;
+            }
+            .wd h3{
+                font-size:10px;
+            }
+            .wd h2{
+                font-size:12px;
+            }
+        } */
+        .zone{
+            /* background-color:rgba(24, 34, 31, 0.945); */
+            width:80%;
+            margin:auto;
+            text-align:center;
+            padding-top: 100px;
+        }
+        h1{
+            font-size:30px;
+            font-weight:bold;
+        }
+        .zone p{
+            color:gray;
+            padding:10px;
+            line-height: 22px;
+            font-size:14px;
+            font-weight:500;
+        }
+        .row{ 
+            margin-top:5%;
+            display:flex;
+            justify-content:space-between;
+            
+        }
+        .Column{
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom:5px;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            transition:500ms;
+
+        }
+        h3{ 
+            text-align: center;
+            font-weight: 600;
+            margin: 10px;
+        }
+        .Column :hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+         }
+        .Column:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+         }
+         /* @media(max-width: 700px){
+             .Column{
+                 flex-direction: column;
+             }
+         } */
+
+         .gallery{
+             width:80%;
+             margin:auto;
+             text-align: center; 
+             padding-top: 50px;
+         }
+         .gal{
+             flex-basis: 32%;
+             
+             border-radius:10px;
+             margin-bottom: 30px;
+             position:relative;
+             overflow: hidden;
+         }
+         .gal img{
+             width:100%;
+             height: 288px;
+             display: block;
+         }
+         .layer{
+             background:transparent;
+             height:100%;
+             width: 100%;
+             position: absolute;
+             top: 0;
+             left: 0;
+             transition:500ms; 
+         }
+         .layer:hover{ 
+            /* background:rgba(226,0,0,0.7); */
+            /* background:rgba(134, 8, 61, 0.623); */
+            background:rgba(92, 9, 9, 0.7);
+         }
+         .layer h3{
+             width:100%;
+             font-weight:bold;
+             color:bisque;
+             font-size:26px;
+             bottom: 0;
+             opacity:0;
+             /* left: 50%; */
+             position: absolute;
+             text-align:center;
+             transition:500ms;
+
+         }
+         .layer:hover h3{
+             bottom:50%;
+             opacity: 1;
+         }
+         .Fact{
+            width:80%;
+            margin:auto;
+            text-align:center;
+            padding-top: 100px;
+         }
+         .testomonials{
+            width:80%;
+            margin:auto;
+            padding-top: 100px;
+            text-align:center;
+            
+         }
+         .ttmc{
+             flex-basis: 44%;
+             border-radius: 10px;
+             margin-bottom: 5px;
+             text-align:center;
+             padding-top: 100px;
+             text-align:left;
+             background: #ecdcdc;
+             cursor: pointer;
+             padding: 20px;
+             display:flex;
+
+         }
+         .ttmc img {
+             height: 45px;
+             margin-left: 5px;
+             margin-right: 20px;
+             border-radius:20%;
+         }
+         .ttmc p{
+             padding: 0;
+
+         }
+         .ttmc h3{
+             text-align: left;
+             margin-top:15px;
+
+         }
+         .ttmc .fa{
+             color: #f44338;
+             
+         }
+         .cta{
+             margin: 100px auto;
+             width:100%;
+             background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url("https://www.floornature.com/media/photos/1/8908/01_serpentine_zaha-hadid_full.jpg");
+             background-position: center;
+             background-size: cover;
+             background-repeat:no-repeat;
+             border-radius:1px;
+             padding: 100px 0;
+
+         }
+         .cta h1{
+             color:#fff;
+             margin-bottom: 40px;
+             padding:0;
+             text-align:center;
+
+         }
+         .new form, input[type="button"]{
+            background-color:rgba(253, 253, 253, 0.192);
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            margin: 14px auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            
+            text-align: center;
+            transition: 800ms;
+
+        }
+        form, input[type="button"]:hover{ background-color:rgb(46, 8, 8);}
+
+        .footer{
+            width:100%;
+            text-align:center;
+            padding:30px 0px;
+        }
+        .footer h3{
+            margin-top: 20px;
+            margin-bottom:25px;
+            font-weight:bold;
+        }
+        .icon .fa{
+            color:#e20b4c;
+            padding:18px 0;
+            cursor: pointer;
+            margin:0 13px;
+
+
+        }
+        .order {
+            float:right;
+            background-color: #07040218;
+            
+            padding:0px 0;
+        }
+        .dropdown {
+         overflow: hidden;
+         background-color: rgba(51, 51, 51, 0);
+         font-family: Arial;
+        }
+
+        .dropdown a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          }
+        /* The dropdown container */
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        /* Dropdown button */
+        .dropdown .dropbtn {
+          font-size: 16px;
+          border: none;
+          outline: none;
+          color: rgb(158, 147, 147);
+          padding: 17px 10px;
+          background-color: #00000000;
+          font-family: inherit; 
+          margin: 0; 
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #00000000;
+          min-width: 160px;
+          
+        
+        }
+        .dropdown-content a {
+        float: none;
+        color: rgb(255, 245, 245);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .dropdown-content a:hover {
+          background-color: rgba(221, 221, 221, 0.123);
+          
+        }   
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }  
+        /* #ab {
+            font-family: 'Zen Tokyo Zoo', cursive;
+            font-size:25px;
+        } */
+          
+        
+         
+
+
+    </style>
+</head> 
+<body style="background-color: rgb(255, 255, 255);">
+    <section class="header">
+    <div class="box">
+        <ul type="none">
+            <li><a href="">Home</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Menu
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="Menu.html" class="">Main Menu</a>
+                  
+                  <a href="Lunch.html">Lunch</a>
+                  <a href="Brevarage.html">Beverages</a>
+                  <a href="Dinner.html">Dinner</a>
+                  <a href="Dessert.html">Desserts</a>
+                </div>
+              </div>
+            <!-- <li><a href="">Menu</a></li> -->
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            
+        </ul>
+        
+            
+        
+    </div>
+    
+    <div class = "wd">
+        <h1 style="color:rgb(212, 111, 71)" align="center">Swadgiri <br>The Family Restaurant</h1>
+        <br>
+        <h1 align="center">WELCOME!</h1>
+        <br>
+        <h3>Food tastes better when you eat with your family. So you are always welcomed in our family restaurant,
+            give some moment to your lovely family in our lovely restaurant,<i><div id="ab">Swadgiri</div></i></b></h3>
+            <br>
+        <h2>Reservation</h2>
+        <div class="opt">
+        <form method="post">
+            <!-- <input type="button" value="Start Now"> -->
+            <input type="button" onclick="window.location.href='book_table.html'" value="Start Now">
+        </form>
+    </div>
+    </div>  
+    </section>
+
+    <section>
+        <section class="zone">
+            <div class="icon">
+            
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <br>
+            <h1>Zones we offer</h1>
+            <p>We have 3 zones available i.e. Economy, Outer and Special Ocassion zones.</div></p>
+            <div class="row">
+                <div class="Column">
+                    <h3>Economy</h3>
+                    <p>This is our first zone where people can came and enjoy their meals with a cozy enivironment.</p>
+
+                </div>
+                <div class="Column">
+                    <h3>Outer</h3>
+                    <p>We have outer zone in our restaurent where people can enjoy their meals along with an amazing environment of our nature.</p>
+                    
+                </div>
+                <div class="Column">
+                    <h3>Special Ocassion</h3>
+                    <p>This is our zone where people can organize their events, so basically it's for special occasions.</p>
+                    
+                </div>
+            </div>
+    </section>
+
+    <section class="gallery">
+        <h1>Our Gallery</h1><br>
+        <h4><i>Here is some pictures of our different class of restaurant.</i></h4>
+
+        <div class="row">
+            <div class="gal">
+                <img src="gl1.jpg" >
+                <div class="layer">
+                    <h3>Economy class</h3>
+                </div>
+            </div>
+
+            <div class="gal">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0a/ea/ca/70/the-new-seating-area.jpg">
+                <div class="layer">
+                    <h3>Econonmy class</h3>
+                </div>
+            </div>
+
+            <div class="gal">
+                <img src="gl3.jpg" height="258px">
+                <div class="layer">
+                    <h3>Occassional</h3>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="gal">
+                <img src="https://d18b2kerpwlhcq.cloudfront.net/media/wysiwyg/slider/slide4.jpg">
+                <div class="layer">
+                    <h3>Economy class</h3>
+                </div>
+            </div>
+
+            <div class="gal">
+                <img src="g6.jpg">
+                <div class="layer">
+                    <h3>Occassional</h3>
+                </div>
+            </div>
+
+            <div class="gal">
+                <img src="https://live.staticflickr.com/3478/3246866388_2c3572cd61.jpg" height="258px">
+                <div class="layer">
+                    <h3>Outer zone</h3>
+                </div>
+            
+        </div>
+
+    </section>
+
+    <section class="Fact">
+        <h1>Our Facilities</h1>
+        <p>Here is our uniqueness, along with our services, we care about our customer Satisfaction, Emotion and especially Budget<br> So to make 
+            our customers happy we provide these kind of facilities given below :-
+        </p>
+
+        <div class="row">
+            <div class="facilities">
+                <img src="https://th.bing.com/th/id/OIP.EZ6yGtyFmdbHnUs8eLNgrQHaDy?w=323&h=178&c=7&o=5&dpr=1.25&pid=1.7" height="258px" width="390px">
+                <h3>Pocket Friendly</h3>
+                <p>Keeping our customers budget in our mind , we always try to provide them tasty food in their budget. We also provide some coupons to our special
+                     customer so that they can afford the food which is out of their comfort zone as well</p>
+
+            </div>
+            <div class="facilities"> 
+                <img src="https://cdn-images-1.medium.com/max/2000/1*5AyAIQYKHBmrfpWyRZ1yaA.jpeg" height="258px" width="390px">
+                <h3>Tasty and Healthy Food</h3>
+                <p>With proper services and caring about our customer's taste, we also keep looking on their health also and for that we always use ingridients which 
+                    are good for<br> thier health.
+                </p>
+
+            </div>
+            <div class="facilities">
+                <img src="p3.jpg" height="258px">
+                <h3>Pet's Zone</h3>
+                <p>We know that, some people have pets and they have strong affection towards them. So keeping their emotions in our mind we have facilates pet zone in our restaurent
+                    , where they can feed or eat with their pets</p>
+
+            </div>
+        </div> 
+    </section>
+
+    <section class="testomonials">
+        <h1>What Our Customers Says</h1><br>
+        <h4><i>Here is our customer's review about us.</i></h4>
+
+        <div class="row">
+            
+            <div class="ttmc">
+                <img src="f1.jpg">
+                <div>
+                    <p>It’s a great experience. The ambiance is very welcoming and charming.
+                         Amazing wines, food and service. Staff are extremely knowledgeable and make great recommendations.</p>
+                    <h3>Shaloni Mishra</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+
+            <div class="ttmc">
+                <img src="f3.jpg">
+                <div>
+                    <p>This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes,
+                         beautiful presentation, wide wine list and wonderful dessert. </p>
+                    <h3>Subhankar Tiwari</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h1>Got a question? We would love to hear from you. Send us your query and we will respond as soon as possible.</h1>
+        <div class="new">
+            <form action="#" method="post">
+                <input type="button" onclick="window.location.href='contactus.html'" value="Contact us">
+            </form>
+        </div>
+    </section>
+<hr>
+<hr>
+
+
+  </section>
+
+    <section class="footer">
+        <h2>About us</h2>
+        <br>
+        <p style="color: #c94e73;"><b>Astitva</b> opened the first <b>Swadgiri Restaurant</b> in Gomtinagar, Lucknow on November 18, 2002. Today, there are 23 areas all through Lucknow,<br> Patna, Delhi, Ayodhya and Agra.
+
+            Swadgiri Restaurants are well known with a substantial gathering of people including families, kids, seniors and business experts. Our benevolent condition is perfect for praising unique<br> events, facilitating a business lunch or assembling for a flavorful dinner with loved ones.
+            
+            Open day by day for lunch and dinner,Amul offers a choice of naturally arranged things utilizing just the best fixings accessible. Top picks incorporate Certified Angus Beef®, Paneer Tikka,<br>
+             Achaari paneer, Dal Makhani, Chilly Baby Corn, strength plates of mixed greens, wood-let go pizzas, pasta, sandwiches,Pineapple Mojito and more.Amul;s heated merchandise and treats <br>
+             including our Six-Layer Chocolate Motherlode Cake, Scratch Carrot Cake and delectably rich cream cheddar pies are prevalent top choices with our visitors.
+            
+             <br></p>
+              <br>
+        <div class="icon">
+            <a href="https://www.facebook.com/astitva.narain?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/AstitvaNarain?t=HbPM5m6s6lIJaBC58BllbQ&s=09"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/astitva-narain-29993b1a8"><i class="fa fa-linkedin"></i></a>
+            
+        </div>
+    </section>
+
+   
+</body>
+</html>
